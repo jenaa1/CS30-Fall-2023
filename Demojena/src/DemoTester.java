@@ -10,8 +10,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+
 import java.awt.Font;
 import javax.swing.JTextArea;
+import javax.swing.JLabel;
 
 public class DemoTester {
 
@@ -45,7 +48,15 @@ public class DemoTester {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize() 
+	{
+		ImageIcon cres = new ImageIcon("/Demojena/src/download.png");
+		ImageIcon western = new ImageIcon("/Demojena/src/western.png");
+		
+		
+		
+		
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 507, 382);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,6 +72,11 @@ public class DemoTester {
 		panel.add(fn);
 		fn.setColumns(10);
 		
+		JLabel dis = new JLabel("New label");
+		dis.setBounds(41, 241, 135, 78);
+		panel.add(dis);
+		
+		
 		JComboBox cb2 = new JComboBox();
 		cb2.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		cb2.setModel(new DefaultComboBoxModel(new String[] {"Select School", "Cresent", "Western", "Eastern"}));
@@ -74,7 +90,7 @@ public class DemoTester {
 		panel.add(cb1);
 		
 		JTextArea display = new JTextArea();
-		display.setBounds(41, 134, 295, 117);
+		display.setBounds(41, 134, 295, 85);
 		panel.add(display);
 		
 		ln = new JTextField();
@@ -110,10 +126,14 @@ public class DemoTester {
 				if(cb1.getSelectedItem().equals("Cresent"))
 				{
 					school = "Cresent";
+					
+					dis.setIcon(cres);
 				}
 				else if(cb1.getSelectedItem().equals("Western"))
 				{
 					school = "Western";
+					
+					dis.setIcon(western);
 				}
 				else if(cb1.getSelectedItem().equals("Eastern"))
 				{
@@ -133,6 +153,7 @@ public class DemoTester {
 		btnNewButton.setBounds(365, 13, 116, 319);
 		panel.add(btnNewButton);
 		
+	
 		
 		
 		
