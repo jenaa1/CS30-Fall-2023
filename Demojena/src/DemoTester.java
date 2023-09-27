@@ -53,10 +53,6 @@ public class DemoTester {
 		ImageIcon cres = new ImageIcon("/Demojena/src/download.png");
 		ImageIcon western = new ImageIcon("/Demojena/src/western.png");
 		
-		
-		
-		
-		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 507, 382);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
